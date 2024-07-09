@@ -1,7 +1,9 @@
 # shadcn-board
 
-[참고영상](https://youtu.be/0z2QSIZlKSA?si=IWhnXBNJGTDNYKSG)
+[참고영상](https://youtu.be/0z2QSIZlKSA?si=IWhnXBNJGTDNYKSG)    
+
 '2024 Next.js & Supabase Tutorial - 데이터 조회, UI/UX 개선'까지 완료
+
 ## 설치
 ```
 npx create-next-app@latest my-app --typescript --tailwind --eslint
