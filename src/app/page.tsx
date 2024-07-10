@@ -29,7 +29,7 @@ function Home() {
       });
     }
 
-    // 방금 생성한 TO DO LIST의 ID 값으로 URL 파라미터 생성
+    // 생성한 TO DO LIST의 ID 값으로 URL 파라미터 생성
     let { data } = await supabase.from('todos').select();
 
     if (data) {
