@@ -45,7 +45,7 @@ function SideNavigation() {
 
   useEffect(() => {
     getTodos();
-  }, []);
+  }, [todos]);
 
   return (
     <div className={styles.container}>

@@ -10,6 +10,7 @@ npx create-next-app@latest my-app --typescript --tailwind --eslint
 npm install --save-dev sass
 npm i @uiw/react-md-editor
 npm install @supabase/supabase-js
+npm install nanoid
 code . -r
 
 <!-- shadcn -->
