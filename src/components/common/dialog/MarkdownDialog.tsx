@@ -26,6 +26,8 @@ import styles from './MarkdownDialog.module.scss';
 function MarkdownDialog() {
   const [open, setOpen] = useState<boolean>(false);
   const [title, setTitle] = useState<string>('');
+  const [startDate, setStartDate] = useState<Date | undefined>(new Date());
+  const [endDate, setEndDate] = useState<Date | undefined>(new Date());
   const [content, setContents] = useState<string | undefined>('');
   const { toast } = useToast();
 
@@ -33,7 +35,7 @@ function MarkdownDialog() {
 
   // Supabase에 저장
   const onSubmit = async () => {
-    if (!title || !content) {
+    if (!title || !startDate || !endDate || !content) {
       toast({
         title: '작성되지 않은 부분이 있습니다.',
         description: '제목, 날짜 혹은 내용을 모두 작성해주세요.',
@@ -41,7 +43,6 @@ function MarkdownDialog() {
       return;
     } else {
       // Supabase 데이터베이스에 연동
-
       const { data, error, status } = await supabase
         .from('todos')
         .insert([{ title: title, content: content }])
